@@ -607,7 +607,7 @@
 
     /* BOOKING */
     .booking-section {
-      padding: 6rem 0;
+      padding: 4rem 0;
       background: var(--booking-bg);
     }
 
@@ -866,22 +866,22 @@
     /* RESPONSIVE */
     @media(max-width: 50rem) {
       .hero-bottom {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
       }
 
       .hero-stats {
         border-left: none;
-        border-top: 1px solid rgba(28, 27, 24, .08)
+        border-top: 1px solid rgba(28, 27, 24, .08);
       }
 
       .hero-text {
-        padding: 2.5rem 1.5rem
+        padding: 2.5rem 1.5rem;
       }
 
       .desc-grid,
       .booking-grid {
         grid-template-columns: 1fr;
-        gap: 2.5rem
+        gap: 2.5rem;
       }
 
       .gallery-grid {
@@ -895,25 +895,40 @@
         grid-row: span 2;
       }
 
+      .gitem img {
+        height: 12rem;
+        object-fit: cover;
+      }
+
+      .lifestyle-hero {
+        aspect-ratio: 4/3;
+      }
+
+
       .lifestyle-grid {
-        grid-template-columns: 1fr 1fr
+        grid-template-columns: 1fr;
+        margin-top: 3px;
       }
 
       .facts-grid {
-        grid-template-columns: 1fr 1fr
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .lifestyle-section {
+        padding: 2.5rem 0;
       }
 
       .section-inner,
       .gallery-inner {
-        padding: 0 1.5rem
+        padding: 0 1.5rem;
       }
 
       .nav-links {
-        display: none
+        display: none;
       }
 
       .features {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
       }
     }
   </style>
