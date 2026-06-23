@@ -1355,30 +1355,55 @@
   </div>
 
   <script>
-    const galleryImgs = [
-      { src: "images/exterior.jpg", alt: "Exteriör" },
-      { src: "images/vardagsrum.jpg", alt: "Vardagsrum" },
-      { src: "images/balkong.jpg", alt: "Balkong" },
-      { src: "images/kok.jpg", alt: "Kök" },
-      { src: "images/sovrum.jpg", alt: "Sovrum" },
-      { src: "images/hall.jpg", alt: "Hall & entré" },
-    ];
+    const galleries = {
+      main: [
+        { src: "images/Skolkvior-bostad-Klintehamn-web.jpg", alt: "Exteriör" },
+        { src: "images/vardagsrum_300dpi-web.jpg", alt: "Vardagsrum" },
+        { src: "images/A01-2227-kok.jpg", alt: "Kök" },
+        { src: "images/balkong-Klintehamn.jpg", alt: "Balkong" },
+        { src: "images/DSC_0800-2-balkong.jpg", alt: "Balkong" },
+        { src: "images/Balkong1-3.webp", alt: "Balkong" },
+        { src: "images/Stora-sovrummet.jpg", alt: "Sovrum" },
+        { src: "images/sovrum-2-web.jpg", alt: "Sovrum" },
+        { src: "images/badrum_300dpi.jpg", alt: "Badrum" },
+        { src: "images/A01_2275-hall-2.jpg", alt: "Hall & entré" },
+      ],
+      area: [
+        { src: "images/Badbrygga-Klintehamn-web.jpg", alt: "Badbryggan i Klintehamn" },
+        { src: "images/NIK_2068-Klintehamn-kajen-web.jpg", alt: "Kajen i Klintehamn" },
+        { src: "images/Kajen-Klintehamn-2-web.jpg", alt: "Båtmarina i Klintehamn" },
+        { src: "images/Boat-to-Stora-Karlso-Klintehamn-web.jpg", alt: "Båt till Stora Karlsö" },
+        { src: "images/A01_2327-Boat-to-Karlso-2-web.jpg", alt: "Båt till Stora Karlsö" },
+        { src: "images/A01_2460-havet.jpg", alt: "Östersjön Gotland" },
+        { src: "images/A01_2473-Hyra-kanot-Klintehamn.jpg", alt: "Kanotuthyrning" },
+        { src: "images/Klinteberget-web.jpg", alt: "Klinteberget" },
+        { src: "images/SUP-Sunset-Gotland.jpg", alt: "SUP i solnedgång" },
+        { src: "images/A01_2501-sunset-Klintehamn-web.jpg", alt: "Solnedgång i Klintehamn" },
+      ]
+    };
 
+    let lbGallery = "main";
     let lbIdx = 0;
 
-    function openLB(idx) {
+    function openLB(gallery, idx) {
+      lbGallery = gallery;
       lbIdx = idx;
-      document.getElementById("lbImg").src = galleryImgs[idx].src;
+      document.getElementById("lbImg").src = galleries[gallery][idx].src;
+      document.getElementById("lbImg").alt = galleries[gallery][idx].alt;
       document.getElementById("lightbox").classList.add("open");
       document.body.style.overflow = "hidden";
     }
+
     function closeLB() {
       document.getElementById("lightbox").classList.remove("open");
       document.body.style.overflow = "";
     }
+
     function lbNav(dir) {
-      lbIdx = (lbIdx + dir + galleryImgs.length) % galleryImgs.length;
-      document.getElementById("lbImg").src = galleryImgs[lbIdx].src;
+      const imgs = galleries[lbGallery];
+      lbIdx = (lbIdx + dir + imgs.length) % imgs.length;
+      document.getElementById("lbImg").src = imgs[lbIdx].src;
+      document.getElementById("lbImg").alt = imgs[lbIdx].alt;
     }
 
     document.getElementById("lightbox").addEventListener("click", function (e) {
