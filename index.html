@@ -94,8 +94,8 @@
 
     .nav-logo span {
       /*color: var(--navy);*/
-      color: #7AAFC8;
-      font-style: italic
+      color: #FFFFFF;
+      font-style: italic;
     }
 
     .nav-links {
@@ -119,9 +119,8 @@
     }
 
     .nav-cta {
-      /*background: var(--navy);*/
-      background: #4A7FA0;
-      color: #fff;
+      background: #f8b138;
+      color: #000000;
       padding: 0.55rem 1.25rem;
       border: none;
       border-radius: 3px;
@@ -134,8 +133,25 @@
     }
 
     .nav-cta:hover {
-      background: var(--navy2)
+      background: #fac05a;
+      ;
     }
+
+    /*background: var(--navy);
+      background: #4A7FA0;
+      color: #fff;
+      padding: 0.55rem 1.25rem;
+      border: none;
+      border-radius: 3px;
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s; */
+    }
+
+
 
     /* HERO */
     .hero {
@@ -904,7 +920,6 @@
         aspect-ratio: 4/3;
       }
 
-
       .lifestyle-grid {
         grid-template-columns: 1fr;
         margin-top: 3px;
@@ -929,6 +944,12 @@
 
       .features {
         grid-template-columns: 1fr;
+      }
+
+      @media(max-width: 50rem) {
+        .nav-cta {
+          display: none;
+        }
       }
     }
   </style>
@@ -959,6 +980,9 @@
           <div class="play-tri"></div>
         </div>
         <p class="video-caption">Videovisning av lägenheten</p>
+        <p
+          style="font-size:0.7rem; letter-spacing:0.1em; opacity:0.5; margin-top:0.75rem; color:rgb(255, 255, 255);text-transform:uppercase;">
+          Film från lägenheten kommer snart</p>
       </div>
     </div>
 
