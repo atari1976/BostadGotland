@@ -23,9 +23,10 @@
     :root {
       --sand: #FDF6E8;
       /* ljus, varm, solkysst beige — ren och fräsch */
-      --sand2: #FFF8F0;
+      /*--sand2: #FFF8F0;*/
       /* ännu ljusare varm vit — hero-stats, ersätter den grå tonen */
       --sand3: #EFE3C9;
+      --beige: #DDD0B8;
       --cream: #FFFFFF;
       /* rent vitt — galleri, faktakort */
       --ink: #1C1B18;
@@ -319,7 +320,7 @@
 
     .hero-stats {
       padding: 3.5rem 3rem;
-      background: var(--sand2);
+      background: var(--sand);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -355,8 +356,7 @@
 
     /* QUOTE STRIP */
     .quote-strip {
-      background: var(--navy-dark);
-      /* mörkare = bättre kontrast */
+      background: var(--sand3);
       padding: 4.5rem 2rem;
       /* mer luft ovanför och under */
       text-align: center;
@@ -367,7 +367,7 @@
       font-size: clamp(1.2rem, 2.5vw, 1.7rem);
       /* lite större */
       font-style: italic;
-      color: #FFFFFF;
+      color: #2a2a2a;
       /* rent vitt istället för 92% */
       max-width: 44rem;
       margin: 0 auto 1.5rem;
@@ -383,6 +383,21 @@
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.75);
       font-weight: 400;
+    }
+
+
+    .quote-strip-2 {
+      background: var(--sand3);
+      padding: 4.5rem 2rem;
+      text-align: center;
+    }
+
+    .quote-strip-2 .quote-text {
+      color: #2a2a2a;
+    }
+
+    .quote-strip-2 .quote-attr {
+      color: rgba(28, 27, 24, 0.6);
     }
 
     /* GALLERY */
@@ -1266,6 +1281,12 @@
       </div>
     </div>
   </section>
+
+  <div class="quote-strip-2">
+    <p class="quote-text">"Klintehamn är orten där du har havet fem minuter bort, affären runt hörnet och Visby inom
+      bekvämt räckhåll, utan Visbys prislapp."</p>
+    <p class="quote-attr">Klintehamn · Gotland</p>
+  </div>
 
   <!-- ===================== BOKA VISNING =================== -->
   <section id="boka" class="booking-section">
