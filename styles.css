@@ -603,6 +603,12 @@
             margin-top: 0.75rem;
         }
 
+        .section-h2-lifestyle {
+            text-align: center;
+            max-width: 31rem;
+            margin: 0 auto;
+        }
+
         .litem {
             overflow: hidden;
             aspect-ratio: 4/3;
