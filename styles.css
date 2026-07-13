@@ -119,9 +119,13 @@
         .hero {
             padding-top: 3.625rem;
             background: var(--sand);
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
+        }
+
+        .hero-accent-bar {
+            height: 3rem;
+             background: linear-gradient(135deg, #1E2C3A 0%, #2B4A64 60%, #3A6080 100%);
         }
 
         .hero-video {
@@ -888,6 +892,7 @@
         @media(max-width: 50rem) {
             .hero-bottom {
                 grid-template-columns: 1fr;
+                padding-top: 2rem;
             }
 
             .hero-stats {
@@ -898,6 +903,7 @@
             .hero-text {
                 padding: 2.5rem 1.5rem;
             }
+     
 
             .desc-grid,
             .booking-grid {
@@ -952,9 +958,12 @@
                 grid-template-columns: 1fr;
             }
 
-            @media(max-width: 50rem) {
-                .nav-cta {
+            .nav-cta {
                     display: none;
-                }
+            }
+
+            .hero-accent-bar {
+                height: 1.5rem;
             }
         }
+        
